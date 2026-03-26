@@ -2,18 +2,22 @@
 #include <cstdlib>
 using namespace std;
 
-int modulo(int a, int b){
+int modulo(int a, int b)
+{
 	int c;
 	c=a%b;
-	if (c<0) {
+	if (c<0) 
+	{
 		c+=b;
 	}
 	return c;
-	}
+}
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
 	int a, b, c;
-	if (argc!=3) {
+	if (argc!=3) 
+	{
 		cout << "Please insert two numbers" << endl;
 		return 0;
 	}
