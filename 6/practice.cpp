@@ -12,15 +12,20 @@ int check_validity(int x){
 int main(int argc, char *argv[]){
     int i,x;
     int *numbers;
-    int counter=0;
     do{
-        cout << "Insert a number: ";
+        cout << "Insert the number of inputs: ";
         cin >> x;
-        counter++;
     }
     while (check_validity(x)!=1);
 
-    numbers=(int *)malloc(sizeof(int)*counter);
+    numbers=(int *)malloc(sizeof(int)*x);
+    for (i=0;i<x;i++){
+        cout << "Please input " << i+1 << "th number: ";
+        cin >> numbers[i];
+    }
+    for (i=0;i<x;i++){
+        cout << "numbers[" << i << "] = " << numbers[i] << endl;
+    }
 
     return 0;
 }
